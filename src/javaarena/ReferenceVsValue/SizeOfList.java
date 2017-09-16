@@ -1,4 +1,4 @@
-package javaarena;
+package javaarena.ReferenceVsValue;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,7 +14,7 @@ import java.util.List;
  * @author mitz
  */
 
-public class Size {
+public class SizeOfList {
     public static void main(String[] args){
         List<Integer> l = new ArrayList<>();
         l.add(55);
