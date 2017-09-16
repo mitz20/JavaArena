@@ -14,8 +14,11 @@ public class LambdaExpression {
     public static void main(String[] args) {
         FunctionalInterface fi = (int x) -> System.out.println(x * 2);
         fi.singleAbstractFunction(5);
-        FunctionalInterface fi2 = (int x)-> System.out.println(x*3);
+        FunctionalInterface fi2 = (int x) -> System.out.println(x * 3);
         fi2.singleAbstractFunction(5);
+        fi2.normalFunction(5);
+        AnotherFunctionalInterface afi = () -> System.out.println("empty lambda expression");
+        afi.anotherAbstractFunction();
     }
 }
 
@@ -29,3 +32,15 @@ interface FunctionalInterface {
         System.out.println(x);
     }
 }
+
+interface AnotherFunctionalInterface {
+
+    void anotherAbstractFunction();
+}
+
+
+/*
+conclusion:
+1. change the method on the fly
+2. function created without belonging to any class
+*/
